@@ -1,10 +1,21 @@
-const PI = 3.14159;
-let radius;
-let circumference;
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
 
-radius = window.prompt("enter the radius of a circle");
-radius = Number(radius);
+let count = 0;
 
-circumference = 2 * PI * radius;
+increaseBtn.onclick = function(){
+    count++;
+    countLabel.textContent = count;
+}
 
-console.log(circumference);
+decreaseBtn.onclick = function(){
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function(){
+    count = 0;
+    countLabel.textContent = count;
+}
